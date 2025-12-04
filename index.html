@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabulario Deportes y Ocio</title>
+<style>
+    /* ESTILOS DE LA TABLA - Mismos estilos que el archivo original */
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
+    
+    .vocab-table {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+    
+    .vocab-table th, .vocab-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        vertical-align: middle;
+    }
+    
+    .vocab-table th {
+        background-color: #2c3e50;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    
+    .vocab-table tr:nth-child(even) { background-color: #f9f9f9; }
+    .vocab-table tr:hover { background-color: #f1f1f1; }
+
+    .col-audio { text-align: center; width: 80px; }
+    .col-spanish { color: #555; }
+
+    /* Estilo para las categorías/separadores */
+    .category-header {
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-top: 3px solid #2c3e50;
+    }
+
+    /* ESTILO DEL BOTÓN PLAY */
+    .play-btn {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.1s, background-color 0.2s;
+    }
+    
+    .play-btn:hover { background-color: #2980b9; transform: scale(1.1); }
+    .play-btn:active { transform: scale(0.95); }
+    
+    .play-btn svg { width: 16px; height: 16px; fill: white; margin-left: 2px; }
+
+</style>
+</head>
+<body>
+
+<table class="vocab-table">
+    <thead>
+        <tr>
+            <th>ENGLISH</th>
+            <th class="col-audio">AUDIO</th>
+            <th>ESPAÑOL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td colspan="3" class="category-header">SPORTS & ACTIVITIES</td></tr>
+        <tr><td>Hang-gliding</td><td class="col-audio"><audio id="aud-hanggliding" src="hanggliding.mp3"></audio><button class="play-btn" onclick="playAudio('aud-hanggliding')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Ala delta</td></tr>
+        <tr><td>Tennis</td><td class="col-audio"><audio id="aud-tennis" src="tennis.mp3"></audio><button class="play-btn" onclick="playAudio('aud-tennis')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Tenis</td></tr>
+        <tr><td>Snowboarding</td><td class="col-audio"><audio id="aud-snowboarding" src="snowboarding.mp3"></audio><button class="play-btn" onclick="playAudio('aud-snowboarding')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Snowboard</td></tr>
+        <tr><td>Cycling</td><td class="col-audio"><audio id="aud-cycling" src="cycling.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cycling')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Ciclismo</td></tr>
+        <tr><td>Scuba diving</td><td class="col-audio"><audio id="aud-scubadiving" src="scubadiving.mp3"></audio><button class="play-btn" onclick="playAudio('aud-scubadiving')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Buceo</td></tr>
+        <tr><td>Rock climbing</td><td class="col-audio"><audio id="aud-rockclimbing" src="rockclimbing.mp3"></audio><button class="play-btn" onclick="playAudio('aud-rockclimbing')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Escalada</td></tr>
+        <tr><td>Fishing</td><td class="col-audio"><audio id="aud-fishing" src="fishing.mp3"></audio><button class="play-btn" onclick="playAudio('aud-fishing')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Pesca</td></tr>
+        <tr><td>Motor racing</td><td class="col-audio"><audio id="aud-motorracing" src="motorracing.mp3"></audio><button class="play-btn" onclick="playAudio('aud-motorracing')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Carreras de coches</td></tr>
+        <tr><td>Rugby</td><td class="col-audio"><audio id="aud-rugby" src="rugby.mp3"></audio><button class="play-btn" onclick="playAudio('aud-rugby')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Rugby</td></tr>
+        <tr><td>Ice skating</td><td class="col-audio"><audio id="aud-iceskating" src="iceskating.mp3"></audio><button class="play-btn" onclick="playAudio('aud-iceskating')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Patinaje sobre hielo</td></tr>
+        <tr><td>Football</td><td class="col-audio"><audio id="aud-football" src="football.mp3"></audio><button class="play-btn" onclick="playAudio('aud-football')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Fútbol</td></tr>
+        <tr><td>Archery</td><td class="col-audio"><audio id="aud-archery" src="archery.mp3"></audio><button class="play-btn" onclick="playAudio('aud-archery')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Tiro con arco</td></tr>
+        <tr><td>Badminton</td><td class="col-audio"><audio id="aud-badminton" src="badminton.mp3"></audio><button class="play-btn" onclick="playAudio('aud-badminton')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Bádminton</td></tr>
+        <tr><td>Snooker</td><td class="col-audio"><audio id="aud-snooker" src="snooker.mp3"></audio><button class="play-btn" onclick="playAudio('aud-snooker')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Billar</td></tr>
+        <tr><td>Boxing</td><td class="col-audio"><audio id="aud-boxing" src="boxing.mp3"></audio><button class="play-btn" onclick="playAudio('aud-boxing')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Boxeo</td></tr>
+        <tr><td>Golf</td><td class="col-audio"><audio id="aud-golf" src="golf.mp3"></audio><button class="play-btn" onclick="playAudio('aud-golf')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Golf</td></tr>
+        <tr><td>Fencing</td><td class="col-audio"><audio id="aud-fencing" src="fencing.mp3"></audio><button class="play-btn" onclick="playAudio('aud-fencing')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Esgrima</td></tr>
+        <tr><td>Parachuting / Sky diving</td><td class="col-audio"><audio id="aud-parachuting" src="parachuting.mp3"></audio><button class="play-btn" onclick="playAudio('aud-parachuting')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Paracaidismo</td></tr>
+        
+        <tr><td colspan="3" class="category-header">SPORTS GEAR & VENUES</td></tr>
+        <tr><td>Gloves</td><td class="col-audio"><audio id="aud-gloves" src="gloves.mp3"></audio><button class="play-btn" onclick="playAudio('aud-gloves')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Guantes</td></tr>
+        <tr><td>Boots</td><td class="col-audio"><audio id="aud-boots" src="boots.mp3"></audio><button class="play-btn" onclick="playAudio('aud-boots')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Botas</td></tr>
+        <tr><td>Bow</td><td class="col-audio"><audio id="aud-bow" src="bow.mp3"></audio><button class="play-btn" onclick="playAudio('aud-bow')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Arco</td></tr>
+        <tr><td>Arrow</td><td class="col-audio"><audio id="aud-arrow" src="arrow.mp3"></audio><button class="play-btn" onclick="playAudio('aud-arrow')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Flecha</td></tr>
+        <tr><td>Racquet</td><td class="col-audio"><audio id="aud-racquet" src="racquet.mp3"></audio><button class="play-btn" onclick="playAudio('aud-racquet')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Raqueta (bádminton)</td></tr>
+        <tr><td>Clubs</td><td class="col-audio"><audio id="aud-clubs" src="clubs.mp3"></audio><button class="play-btn" onclick="playAudio('aud-clubs')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Palos de golf</td></tr>
+        <tr><td>Parachute</td><td class="col-audio"><audio id="aud-parachute" src="parachute.mp3"></audio><button class="play-btn" onclick="playAudio('aud-parachute')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Paracaídas</td></tr>
+        <tr><td>Pool table</td><td class="col-audio"><audio id="aud-pooltable" src="pooltable.mp3"></audio><button class="play-btn" onclick="playAudio('aud-pooltable')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Mesa de billar</td></tr>
+        <tr><td>Archery range</td><td class="col-audio"><audio id="aud-archeryrange" src="archeryrange.mp3"></audio><button class="play-btn" onclick="playAudio('aud-archeryrange')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Campo de tiro con arco</td></tr>
+        <tr><td>Badminton court</td><td class="col-audio"><audio id="aud-badmintoncourt" src="badmintoncourt.mp3"></audio><button class="play-btn" onclick="playAudio('aud-badmintoncourt')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Pista de bádminton</td></tr>
+        <tr><td>Golf course</td><td class="col-audio"><audio id="aud-golfcourse" src="golfcourse.mp3"></audio><button class="play-btn" onclick="playAudio('aud-golfcourse')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Campo de golf</td></tr>
+        <tr><td>Boxing ring</td><td class="col-audio"><audio id="aud-boxingring" src="boxingring.mp3"></audio><button class="play-btn" onclick="playAudio('aud-boxingring')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Ring de boxeo</td></tr>
+        <tr><td>Football pitch/field</td><td class="col-audio"><audio id="aud-footballpitch" src="footballpitch.mp3"></audio><button class="play-btn" onclick="playAudio('aud-footballpitch')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Campos de fútbol</td></tr>
+
+        <tr><td colspan="3" class="category-header">LEISURE & PERFORMANCE</td></tr>
+        <tr><td>Cookery</td><td class="col-audio"><audio id="aud-cookery" src="cookery.mp3"></audio><button class="play-btn" onclick="playAudio('aud-cookery')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Cocina (hobby)</td></tr>
+        <tr><td>Gardening</td><td class="col-audio"><audio id="aud-gardening" src="gardening.mp3"></audio><button class="play-btn" onclick="playAudio('aud-gardening')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Jardinería</td></tr>
+        <tr><td>Amusement park</td><td class="col-audio"><audio id="aud-amusementpark" src="amusementpark.mp3"></audio><button class="play-btn" onclick="playAudio('aud-amusementpark')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Parque de atracciones</td></tr>
+        <tr><td>Roller coaster</td><td class="col-audio"><audio id="aud-rollercoaster" src="rollercoaster.mp3"></audio><button class="play-btn" onclick="playAudio('aud-rollercoaster')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Montaña rusa</td></tr>
+        <tr><td>Wheel (Ferris)</td><td class="col-audio"><audio id="aud-wheel" src="wheel.mp3"></audio><button class="play-btn" onclick="playAudio('aud-wheel')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Noria</td></tr>
+        <tr><td>Theatre</td><td class="col-audio"><audio id="aud-theatre" src="theatre.mp3"></audio><button class="play-btn" onclick="playAudio('aud-theatre')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Teatro</td></tr>
+        <tr><td>Act</td><td class="col-audio"><audio id="aud-act" src="act.mp3"></audio><button class="play-btn" onclick="playAudio('aud-act')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Actuar</td></tr>
+        <tr><td>Performance</td><td class="col-audio"><audio id="aud-performance" src="performance.mp3"></audio><button class="play-btn" onclick="playAudio('aud-performance')"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></td><td class="col-spanish">Actuación</td></tr>
+    </tbody>
+</table>
+
+<script>
+    function playAudio(id) {
+        // Buscar el elemento de audio por su ID
+        var audio = document.getElementById(id);
+        
+        // Chequeo de seguridad: Si no encuentra el audio, avisa en la consola
+        if (!audio) {
+            console.error("ERROR: No encuentro la etiqueta <audio> con id: " + id);
+            return;
+        }
+
+        // 1. Pausar cualquier otro audio que esté sonando
+        document.querySelectorAll('audio').forEach(function(el) {
+            if(el !== audio) {
+                el.pause();
+                el.currentTime = 0;
+            }
+        });
+
+        // 2. Reproducir o pausar el seleccionado
+        if (audio.paused) {
+            var playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function(error) {
+                    console.error("ERROR AL REPRODUCIR: Podría ser que el archivo no existe o el nombre está mal escrito (Mayúsculas/Minúsculas).", error);
+                });
+            }
+        } else {
+            audio.pause();
+        }
+    }
+</script>
+
+</body>
+</html>
